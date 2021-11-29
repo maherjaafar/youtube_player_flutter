@@ -279,9 +279,10 @@ class YoutubePlayerController extends ValueNotifier<YoutubePlayerValue> {
       SystemChrome.setPreferredOrientations([
         DeviceOrientation.landscapeLeft,
         DeviceOrientation.landscapeRight,
-      ]);
+      ]).then((value) => play());
     } else {
-      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+          .then((value) => play());
     }
   }
 
