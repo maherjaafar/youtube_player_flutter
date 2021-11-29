@@ -59,7 +59,7 @@ class _YoutubePlayerBuilderState extends State<YoutubePlayerBuilder>
     SystemChrome.setEnabledSystemUIMode(
       SystemUiMode.manual,
       overlays: isFullScreen ? [] : SystemUiOverlay.values,
-    ).then((value) => widget.player.controller);
+    ).then((value) => widget.player.controller.play());
 
     isFullScreen
         ? widget.onEnterFullScreen?.call()
